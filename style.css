@@ -5,63 +5,101 @@
     
 }
 body {
-    background-image: url(./keyart_s1.jpg);
+   
+
     background-repeat: no-repeat;
-    background-size:cover; 
-}
-
-
-.header {
-    width: 100%;
-    height: 17rem;
-    
-    text-align: center;
-}
-
-.header__head {
-    padding-top: 14rem;
-    font-size: 40px;
-    color: white;
-}
-.container {
-    padding: 3rem 14rem 3rem;
-    justify-content:space-around;
-
-}
-
-.container__box {
-    text-align: center;
-}
-p {
-    padding-top: 1rem;
-}
-
-.container {
-    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
     display: flex;
-}
-.age, .upgrade-gif {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    margin: 0;
+    overflow: hidden;
 }
+body * {
+    z-index: 1;
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  h1 {
+    font-size: 60px;
+    margin: -80px 0 40px;
+  }
+
+
+.container {
+    display: none;
+    transform: scale(2);
+
+}
+
+.age {
+    margin-top: 3rem;
+}
+
 label {
     display: inline-block;
-    padding-bottom: 0.5rem;
-    font-size: 20px;
-    color: white;
-    
-    
+    margin-bottom: 1rem;
 }
 input {
     width: 14rem;
     height: 1.8rem;
     margin-bottom: 2rem;
 }
-h2 {
-    font-size: 36px;
-    color: white;
-}
-p {
-    font-size: 24px;
-    color: white;
+
+
+.container__box {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 
+
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 45px;
+    }
+    .container__box {
+       
+      margin: 10px;
+    }
+    .header__head {
+        padding-top: 14rem;
+        font-size: 2rem;
+        color: white;
+    }
+    .container {
+        padding: 3rem 0px;
+        justify-content:space-around;
+    }
+    h2 {
+        font-size: 15px;
+        margin: 0;
+    }
+    label {
+        font-size: 5px;
+        color: white;
+    }
+
+    .container__box small {
+        font-size: 12;
+    }
+
+}
